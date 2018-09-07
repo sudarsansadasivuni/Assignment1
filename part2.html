@@ -8,61 +8,25 @@
 	<body>		
 	<script type='text/javascript'>
 	{
-		var bg_color = '#ed8369';
-		var black_color = '#000000';
-		var bar_color_1 = '#ffecbf';
-		var bar_color_2 = '#e2ca9e';
-		// each bar is: x,height,width -> the baseline should be at the very bottom
-		var bars = [
-			[29,613,60-29],
-			[102,613,139-102],
-			[197,619,242-197],
-			[292,650,348-292],
-			[398,702,445-398],
-			[503,722,537-503],
-			[570,793,624-570],
-			[679,809,726-679],
-			[811,814,840-811],
-			[905,822,933-905],
-			[1016,787,1074-1016],
-			[1123,712,1181-1123]
-		];
-		var box = [[24,444,143-24,579-444]]; // x,y,width,height
-		// x,y,radius,fill
-		var main_circles = [
-			[702.6,769,20.4,black_color],
-			[702.6,769,8.4,bg_color],
-		];
-		// grouped according to left, right: 'position' is where the circles are centered, children formated as [radius,color]
-		var eight_circles = [
-			{'position':[70,507], 'children':[[23,bg_color],[11,black_color]]},
-			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
-		];
-		<svg width="1200" height="1200">
+	
+			var box= d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
+			var rectangles= box.selectAll("rect").enter().append("rect").attr("x",0).attr("y",0).attr("width",1500).attr("height",1500).attr("fill","#ed8369");
+			var bar=rectangles.selectAll("rect").enter().append("rect");
+			bar.attr("fill","#e2ca9e").attr("x",29).attr("height",613).attr("width",31);
+			bar.attr("fill","#ffecbf").attr("x",102).attr("height",613).attr("width",37);
+			bar.attr("fill","#e2ca9e").attr("x",197).attr("width",45).attr("height",619);
+			bar.attr("fill","#ffecbf").attr("x",292).attr("width",56).attr("height",650);
+			bar.attr("fill","#e2ca9e").attr("x",398).attr("width",47).attr("height",702);
+			bar.attr("fill","#ffecbf").attr("x",503).attr("width",34).attr("height",722);
+			bar.attr("fill","#e2ca9e").attr("x",570).attr("width",54).attr("height",793);
+			bar.attr("fill","#ffecbf").attr("x",679).attr("width",47).attr("height",809);
+			bar.attr("fill","#e2ca9e").attr("x",811).attr("width",29).attr("height",814);
+			bar.attr("fill","#ffecbf").attr("x",905).attr("width",28).attr("height",822);
+			bar.attr("fill","#e2ca9e").attr("x",1016).attr("width",58).attr("height",787);
+			bar.attr("fill","#ffecbf").attr("x",1123).attr("width",58).attr("height",712);
+
+			var recatangle_main= box.selectAll("rect").append("rect").enter().attr("fill","#000000").attr("x",24).attr("y",444).attr("width",119).attr("height",135);
 			
-			var box= d3.select('body').append('svg').attr('width', 1200).attr('height',1200);
-			var svg_element= box.selectAll('rect').enter().attr('x',0).attr('y',0).attr('width',1500).attr('height',1500).attr('fill','#ed8369');
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',29).attr('y',613).attr('width',31).attr('height',613);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',102).attr('y',613).attr('width',37).attr('height',613);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',197).attr('y',619).attr('width',45).attr('height',619);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',292).attr('y',650).attr('width',56).attr('height',650);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',398).attr('y',702).attr('width',47).attr('height',702);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',503).attr('y',722).attr('width',34).attr('height',722);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',570).attr('y',793).attr('width',54).attr('height',793);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',679).attr('y',809).attr('width',47).attr('height',809);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',811).attr('y',814).attr('width',29).attr('height',814);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',905).attr('y',822).attr('width',28).attr('height',822);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',1016).attr('y',787).attr('width',58).attr('height',787);
-			svg_element.selectAll('rect').append('rect').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',1123).attr('y',712).attr('width',58).attr('height',712);
-			var svg_main= svg_element.selectAll('rect').append('rect').enter().attr('class','Mainbox').attr('fill','#000000').attr('x',24).attr('y',444).attr('width',119).attr('height',135);
-			svg_main.selectAll('circle').enter().attr('class','outercircle').attr('fill','#000000').attr('cx',702.6).attr('cy',769).attr('r',20.4);
-			svg_main.selectAll('circle').enter().attr('class','innercircle').attr('fill','#ed8369').attr('cx',702.6).attr('cy',769).attr('r',8.4);
-			d3.select('g').selectAll('circle').enter().attr('class','leftgroup').attr('transform','translate(70,507)');
-			d3.select('leftgroup').selectAll('circle').enter().attr('class','outer').attr('r',23).attr('fill','#ed8369');
-			d3.select('leftgroup').selectAll('circle').enter().attr('class','inner').attr('r',11).attr('fill','#000000');
-			d3.select('g').selectAll('circle').enter().attr('class','rightgroup').attr('transform','translate(104.5,507)');
-			d3.select('rightgroup').selectAll('circle').enter().attr('class','outer').attr('r',21).attr('fill','#ed8369');
-			d3.select('rightgroup').selectAll('circle').enter().attr('class','inner').attr('r',8.4).attr('fill','#000000');
 		</svg>
 		
 		// TODO: create a `rect` with fill `bg_color`, and whose shape matches that of the svg element
