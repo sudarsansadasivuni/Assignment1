@@ -6,6 +6,8 @@
 		<script type='text/javascript' src='../d3.js'></script>
 	</head>
 	<body>		
+		d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
+		select("svg").selectAll("rect").enter().append("rect").attr("x",0).attr("y",0).attr("width",1200).attr("height",1200).attr("fill","#ed8369");
 	<script type='text/javascript'>
 	{
 	var bg_color = '#ed8369';
@@ -39,8 +41,7 @@
 			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
 		];
 
-			var box1= d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
-			var rectangles= box1.selectAll("rect").enter().append("rect").attr("x",0).attr("y",0).attr("width",1200).attr("height",1200).attr("fill","#ed8369");
+			
 			//var bar=rectangles.selectAll("rect").enter().append("rect");
 			//bar.attr("fill","#e2ca9e").attr("x",29).attr("height",613).attr("width",31);
 			//bar.attr("fill","#ffecbf").attr("x",102).attr("height",613).attr("width",37);
