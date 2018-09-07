@@ -6,8 +6,7 @@
 		<script type='text/javascript' src='../d3.js'></script>
 	</head>
 	<body>		
-		d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
-		select("svg").selectAll("rect").enter().append("rect").attr("x",0).attr("y",0).attr("width",1200).attr("height",1200).attr("fill","#ed8369");
+		
 	<script type='text/javascript'>
 	{
 	var bg_color = '#ed8369';
@@ -41,20 +40,21 @@
 			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
 		];
 
-			
-			//var bar=rectangles.selectAll("rect").enter().append("rect");
-			//bar.attr("fill","#e2ca9e").attr("x",29).attr("height",613).attr("width",31);
-			//bar.attr("fill","#ffecbf").attr("x",102).attr("height",613).attr("width",37);
-			//bar.attr("fill","#e2ca9e").attr("x",197).attr("width",45).attr("height",619);
-			//bar.attr("fill","#ffecbf").attr("x",292).attr("width",56).attr("height",650);
-			//bar.attr("fill","#e2ca9e").attr("x",398).attr("width",47).attr("height",702);
-			//bar.attr("fill","#ffecbf").attr("x",503).attr("width",34).attr("height",722);
-			//bar.attr("fill","#e2ca9e").attr("x",570).attr("width",54).attr("height",793);
-			///bar.attr("fill","#ffecbf").attr("x",679).attr("width",47).attr("height",809);
-			//bar.attr("fill","#e2ca9e").attr("x",811).attr("width",29).attr("height",814);
-			//bar.attr("fill","#ffecbf").attr("x",905).attr("width",28).attr("height",822);
-			//bar.attr("fill","#e2ca9e").attr("x",1016).attr("width",58).attr("height",787);
-			//bar.attr("fill","#ffecbf").attr("x",1123).attr("width",58).attr("height",712);
+			d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
+			select("svg").selectAll("rect").enter().append("rect").attr("x",0).attr("y",0).attr("width",1200).attr("height",1200).attr("fill","#ed8369");
+			select("svg").selectAll("rect").enter().append("rect");
+			select("svg").attr("fill","#e2ca9e").attr("x",29).attr("height",613).attr("width",31);
+			select("svg").attr("fill","#ffecbf").attr("x",102).attr("height",613).attr("width",37);
+			select("svg").attr("fill","#e2ca9e").attr("x",197).attr("width",45).attr("height",619);
+			select("svg").attr("fill","#ffecbf").attr("x",292).attr("width",56).attr("height",650);
+			select("svg").attr("fill","#e2ca9e").attr("x",398).attr("width",47).attr("height",702);
+			select("svg").attr("fill","#ffecbf").attr("x",503).attr("width",34).attr("height",722);
+			select("svg").attr("fill","#e2ca9e").attr("x",570).attr("width",54).attr("height",793);
+			select("svg").attr("fill","#ffecbf").attr("x",679).attr("width",47).attr("height",809);
+			select("svg").attr("fill","#e2ca9e").attr("x",811).attr("width",29).attr("height",814);
+			select("svg").attr("fill","#ffecbf").attr("x",905).attr("width",28).attr("height",822);
+			select("svg").attr("fill","#e2ca9e").attr("x",1016).attr("width",58).attr("height",787);
+			select("svg").attr("fill","#ffecbf").attr("x",1123).attr("width",58).attr("height",712);
 
 			//var recatangle_main= box.selectAll("rect").append("rect").enter().attr("fill","#000000").attr("x",24).attr("y",444).attr("width",119).attr("height",135);
 			
