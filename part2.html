@@ -5,9 +5,7 @@
 		<title>Assignment 1 - D3 Workout Pt. 2</title>
 		<script type='text/javascript' src='../d3.js'></script>
 	</head>
-	<body>
-		
-			
+	<body>		
 	<script type='text/javascript'>
 	{
 		var bg_color = '#ed8369';
@@ -40,9 +38,10 @@
 			{'position':[70,507], 'children':[[23,bg_color],[11,black_color]]},
 			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
 		];
-			d3.select('body').append('svg').attr('width', '1200').attr('height', '1200');
-			var svg_element=d3.select('svg').selectAll('rects').attr('class','mainrects').enter().attr('x',0).attr('y',0).attr('width',1500).attr('height',1500).attr('fill','#ed8369');
-			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',29).attr('y',613).attr('width',31).attr('height',613);
+		<svg width="1200" height="1200">
+			var svg_box = d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
+			var svg_element = d3.select("svg").selectAll("rects").attr("class","mainrects").enter().attr("x",0).attr("y",0).attr("width",1500).attr("height",1500).attr("fill","#ed8369");
+			d3.select("svg_element").selectAll("rects").enter().attr("class","bars").attr("fill","#e2ca9e").attr("x",29).attr("y",613).attr("width",31).attr("height",613);
 			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',102).attr('y',613).attr('width',37).attr('height',613);
 			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',197).attr('y',619).attr('width',45).attr('height',619);
 			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',292).attr('y',650).attr('width',56).attr('height',650);
