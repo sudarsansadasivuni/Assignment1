@@ -39,8 +39,8 @@
 			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
 		];
 		<svg width="1200" height="1200">
-			var svg_box = d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
-			var svg_element = d3.select("svg").selectAll("rects").attr("class","mainrects").enter().attr("x",0).attr("y",0).attr("width",1500).attr("height",1500).attr("fill","#ed8369");
+			var svg_box = d3.select("'body'").append("svg").attr("width", 1200).attr("height",1200);
+			var svg_element = d3.select("svg_box").selectAll("rects").attr("class","mainrects").enter().attr("x",0).attr("y",0).attr("width",1500).attr("height",1500).attr("fill","#ed8369");
 			d3.select("svg_element").selectAll("rects").enter().attr("class","bars").attr("fill","#e2ca9e").attr("x",29).attr("y",613).attr("width",31).attr("height",613);
 			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',102).attr('y',613).attr('width',37).attr('height',613);
 			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',197).attr('y',619).attr('width',45).attr('height',619);
