@@ -7,22 +7,22 @@
 	</head>
 	<body>
 		<svg width="1200" height="1200">
-			d3.select('svg').selectAll('rects').attr('class','mainrects').enter().attr('x',0).attr('y',0).attr('width',1500).attr('height',1500).attr('fill','#ed8369');
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',29).attr('y',613).attr('width',31).attr('height',613);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',102).attr('y',613).attr('width',37).attr('height',613);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',197).attr('y',619).attr('width',45).attr('height',619);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',292).attr('y',650).attr('width',56).attr('height',650);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',398).attr('y',702).attr('width',47).attr('height',702);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',503).attr('y',722).attr('width',34).attr('height',722);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',570).attr('y',793).attr('width',54).attr('height',793);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',679).attr('y',809).attr('width',47).attr('height',809);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',811).attr('y',814).attr('width',29).attr('height',814);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',905).attr('y',822).attr('width',28).attr('height',822);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',1016).attr('y',787).attr('width',58).attr('height',787);
-			d3.select('svg').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',1123).attr('y',712).attr('width',58).attr('height',712);
-			d3.select('svg').selectAll('rects').enter().attr('class','Mainbox').attr('fill','#000000').attr('x',24).attr('y',444).attr('width',119).attr('height',135);
-			d3.select('svg').selectAll('circle').append('g').enter().attr('class','outercircle').attr('fill','#000000').attr('cx',702.6).attr('cy',769).attr('r',20.4);
-			d3.select('svg').selectAll('circle').append('g').enter().attr('class','innercircle').attr('fill','#ed8369').attr('cx',702.6).attr('cy',769).attr('r',8.4);
+			var svg_element=d3.select('svg').selectAll('rects').attr('class','mainrects').enter().attr('x',0).attr('y',0).attr('width',1500).attr('height',1500).attr('fill','#ed8369');
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',29).attr('y',613).attr('width',31).attr('height',613);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',102).attr('y',613).attr('width',37).attr('height',613);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',197).attr('y',619).attr('width',45).attr('height',619);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',292).attr('y',650).attr('width',56).attr('height',650);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',398).attr('y',702).attr('width',47).attr('height',702);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',503).attr('y',722).attr('width',34).attr('height',722);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',570).attr('y',793).attr('width',54).attr('height',793);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',679).attr('y',809).attr('width',47).attr('height',809);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',811).attr('y',814).attr('width',29).attr('height',814);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',905).attr('y',822).attr('width',28).attr('height',822);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#e2ca9e').attr('x',1016).attr('y',787).attr('width',58).attr('height',787);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',1123).attr('y',712).attr('width',58).attr('height',712);
+			d3.select('svg_element').selectAll('rects').enter().attr('class','Mainbox').attr('fill','#000000').attr('x',24).attr('y',444).attr('width',119).attr('height',135);
+			d3.select('svg_element').selectAll('circle').append('g').enter().attr('class','outercircle').attr('fill','#000000').attr('cx',702.6).attr('cy',769).attr('r',20.4);
+			d3.select('svg_element').selectAll('circle').append('g').enter().attr('class','innercircle').attr('fill','#ed8369').attr('cx',702.6).attr('cy',769).attr('r',8.4);
 			d3.select('g').selectAll('circle').enter().attr('class','leftgroup').attr('transform','translate(70,507)');
 			d3.select('leftgroup').selectAll('circle').enter().attr('class','outer').attr('r',23).attr('fill','#ed8369');
 			d3.select('leftgroup').selectAll('circle').enter().attr('class','inner').attr('r',11).attr('fill','#000000');
