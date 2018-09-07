@@ -44,8 +44,8 @@
 			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
 		];
 
-		var x = d3.select('body').append('svg').attr('width', '1200').attr('height', '1200');
-		x.selectAll('rect').append('rect').enter().attr('width','1200').attr('height','1200').attr('fill','#ed8369');
+		d3.select('body').append('svg').attr('width', '1200').attr('height', '1200');
+		body.selectAll('rect').append('rect').enter().attr('width','1200').attr('height','1200').attr('fill','#ed8369');
 		// TODO: create a `rect` with fill `bg_color`, and whose shape matches that of the svg element
 
 		// TODO: create `rect`s from the `bars` data, with fill `bar_color_1` when the i'th bar is even and `bar_color_2` if the i'th bar is odd
