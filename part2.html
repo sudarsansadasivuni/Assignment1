@@ -39,7 +39,8 @@
 			{'position':[104.5,507], 'children':[[21,bg_color],[8.4,black_color]]}
 		];
 		<svg width="1200" height="1200">
-			var svg_box = d3.select("body").append("svg").attr("width", 1200).attr("height",1200);
+			
+			var box = d3.select('body').append('svg').attr('width', 1200).attr('height',1200);
 			var svg_element = d3.select("svg_box").selectAll("rects").attr("class","mainrects").enter().attr("x",0).attr("y",0).attr("width",1500).attr("height",1500).attr("fill","#ed8369");
 			d3.select("svg_element").selectAll("rects").enter().attr("class","bars").attr("fill","#e2ca9e").attr("x",29).attr("y",613).attr("width",31).attr("height",613);
 			d3.select('svg_element').selectAll('rects').enter().attr('class','bars').attr('fill','#ffecbf').attr('x',102).attr('y',613).attr('width',37).attr('height',613);
@@ -62,6 +63,7 @@
 			d3.select('g').selectAll('circle').enter().attr('class','rightgroup').attr('transform','translate(104.5,507)');
 			d3.select('rightgroup').selectAll('circle').enter().attr('class','outer').attr('r',21).attr('fill','#ed8369');
 			d3.select('rightgroup').selectAll('circle').enter().attr('class','inner').attr('r',8.4).attr('fill','#000000');
+		</svg>
 		
 		// TODO: create a `rect` with fill `bg_color`, and whose shape matches that of the svg element
 		// TODO: create `rect`s from the `bars` data, with fill `bar_color_1` when the i'th bar is even and `bar_color_2` if the i'th bar is odd
